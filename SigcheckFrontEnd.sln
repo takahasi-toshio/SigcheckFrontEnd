@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.10.35122.118
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SigcheckFrontEnd", "SigcheckFrontEnd.csproj", "{E69B7FB8-7768-417E-9AF8-601B8AD98013}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{E69B7FB8-7768-417E-9AF8-601B8AD98013}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E69B7FB8-7768-417E-9AF8-601B8AD98013}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E69B7FB8-7768-417E-9AF8-601B8AD98013}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E69B7FB8-7768-417E-9AF8-601B8AD98013}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {59DD3C7A-70B8-4156-B6A5-E51A1FF0B596}
+	EndGlobalSection
+EndGlobal
