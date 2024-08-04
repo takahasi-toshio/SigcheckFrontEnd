@@ -23,73 +23,6 @@ namespace SigcheckFrontEnd
             base.Dispose(disposing);
         }
 
-        protected void FileListViewDragEnter(object s, DragEventArgs e)
-        {
-            e.Effect = DragDropEffects.All;
-        }
-
-        protected void FileListViewDragDrop(object s, DragEventArgs e)
-        {
-            if (e.Data.GetDataPresent(DataFormats.FileDrop))
-            {
-                foreach (string path in (string[])e.Data.GetData(DataFormats.FileDrop))
-                {
-                    RunSigcheck(path);
-                }
-            }
-        }
-
-        protected void RunSigcheck(string targetPath)
-        {
-            string dir = Path.GetDirectoryName(Application.ExecutablePath);
-            string[] paths = { dir, "sigcheck.exe" };
-            string sigcheckPath = Path.Combine(paths);
-
-            string output = Path.GetTempFileName();
-
-            using (Process process = new Process())
-            {
-                process.StartInfo.FileName = sigcheckPath;
-                process.StartInfo.Arguments = "-c -s -w \"" + output + "\" \"" + targetPath + "\"";
-                if (process.Start())
-                {
-                    process.WaitForExit();
-                    using (TextFieldParser parser = new TextFieldParser(output))
-                    {
-                        parser.SetDelimiters(",");
-                        bool firstLine = true;
-                        while (!parser.EndOfData)
-                        {
-                            string[] values = parser.ReadFields();
-                            if (firstLine)
-                            {
-                                firstLine = false;
-                            }
-                            else
-                            {
-                                string path = values[0];
-                                string verified = values[1];
-                                string date = values[2];
-                                ListViewItem item = new ListViewItem(path);
-                                item.SubItems.Add(verified);
-                                if (verified == "Signed")
-                                {
-                                    item.SubItems.Add(date);
-                                }
-                                else
-                                {
-                                    item.SubItems.Add("");
-                                }
-                                FileListView.Items.Add(item);
-                            }
-                        }
-                    }
-                }
-            }
-
-            File.Delete(output);
-        }
-
         #region Windows Form Designer generated code
 
         /// <summary>
@@ -98,10 +31,24 @@ namespace SigcheckFrontEnd
         /// </summary>
         private void InitializeComponent()
         {
+            components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(SigcheckFrontEndMainForm));
             FilePathHeader = new ColumnHeader();
             FileListView = new ListView();
             DigitalSignHeader = new ColumnHeader();
             DateHeader = new ColumnHeader();
+            PublisherHeader = new ColumnHeader();
+            DescriptionHeader = new ColumnHeader();
+            FileVersionHeader = new ColumnHeader();
+            ProductHeader = new ColumnHeader();
+            ProductVersionHeader = new ColumnHeader();
+            CopyrightHeader = new ColumnHeader();
+            FileListViewSmallImageList = new ImageList(components);
+            ToolBar = new ToolStrip();
+            ClearAllButton = new ToolStripButton();
+            FilterTextBox = new ToolStripTextBox();
+            FilterTimer = new System.Windows.Forms.Timer(components);
+            ToolBar.SuspendLayout();
             SuspendLayout();
             // 
             // FilePathHeader
@@ -112,11 +59,12 @@ namespace SigcheckFrontEnd
             // FileListView
             // 
             FileListView.AllowDrop = true;
-            FileListView.Columns.AddRange(new ColumnHeader[] { FilePathHeader, DigitalSignHeader, DateHeader });
-            FileListView.Dock = DockStyle.Fill;
-            FileListView.Location = new Point(0, 0);
+            FileListView.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            FileListView.Columns.AddRange(new ColumnHeader[] { FilePathHeader, DigitalSignHeader, DateHeader, PublisherHeader, DescriptionHeader, FileVersionHeader, ProductHeader, ProductVersionHeader, CopyrightHeader });
+            FileListView.Location = new Point(0, 28);
             FileListView.Name = "FileListView";
-            FileListView.Size = new Size(800, 450);
+            FileListView.Size = new Size(1264, 734);
+            FileListView.SmallImageList = FileListViewSmallImageList;
             FileListView.TabIndex = 0;
             FileListView.UseCompatibleStateImageBehavior = false;
             FileListView.View = View.Details;
@@ -131,16 +79,90 @@ namespace SigcheckFrontEnd
             // DateHeader
             // 
             DateHeader.Text = "タイムスタンプ";
+            DateHeader.Width = 100;
+            // 
+            // PublisherHeader
+            // 
+            PublisherHeader.Text = "署名者名";
+            PublisherHeader.Width = 100;
+            // 
+            // DescriptionHeader
+            // 
+            DescriptionHeader.Text = "ファイルの説明";
+            DescriptionHeader.Width = 100;
+            // 
+            // FileVersionHeader
+            // 
+            FileVersionHeader.DisplayIndex = 6;
+            FileVersionHeader.Text = "ファイルバージョン";
+            FileVersionHeader.Width = 100;
+            // 
+            // ProductHeader
+            // 
+            ProductHeader.DisplayIndex = 5;
+            ProductHeader.Text = "製品名";
+            // 
+            // ProductVersionHeader
+            // 
+            ProductVersionHeader.Text = "プロダクトバージョン";
+            // 
+            // CopyrightHeader
+            // 
+            CopyrightHeader.Text = "著作権";
+            // 
+            // FileListViewSmallImageList
+            // 
+            FileListViewSmallImageList.ColorDepth = ColorDepth.Depth32Bit;
+            FileListViewSmallImageList.ImageStream = (ImageListStreamer)resources.GetObject("FileListViewSmallImageList.ImageStream");
+            FileListViewSmallImageList.TransparentColor = Color.Transparent;
+            FileListViewSmallImageList.Images.SetKeyName(0, "チェックボックスアイコン.png");
+            FileListViewSmallImageList.Images.SetKeyName(1, "太いバツのアイコン3.png");
+            // 
+            // ToolBar
+            // 
+            ToolBar.Items.AddRange(new ToolStripItem[] { ClearAllButton, FilterTextBox });
+            ToolBar.Location = new Point(0, 0);
+            ToolBar.Name = "ToolBar";
+            ToolBar.Size = new Size(1264, 25);
+            ToolBar.TabIndex = 1;
+            ToolBar.Text = "toolStrip1";
+            // 
+            // ClearAllButton
+            // 
+            ClearAllButton.DisplayStyle = ToolStripItemDisplayStyle.Image;
+            ClearAllButton.Image = (Image)resources.GetObject("ClearAllButton.Image");
+            ClearAllButton.ImageTransparentColor = Color.Magenta;
+            ClearAllButton.Name = "ClearAllButton";
+            ClearAllButton.Size = new Size(23, 22);
+            ClearAllButton.Text = "すべて削除";
+            ClearAllButton.ToolTipText = "すべて削除";
+            ClearAllButton.Click += ClearAllButton_Click;
+            // 
+            // FilterTextBox
+            // 
+            FilterTextBox.Name = "FilterTextBox";
+            FilterTextBox.Size = new Size(100, 25);
+            FilterTextBox.ToolTipText = "絞り込み";
+            FilterTextBox.TextChanged += FilterTextBoxTextChanged;
+            // 
+            // FilterTimer
+            // 
+            FilterTimer.Interval = 1000;
+            FilterTimer.Tick += FilterTimer_Tick;
             // 
             // SigcheckFrontEndMainForm
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 450);
+            ClientSize = new Size(1264, 761);
+            Controls.Add(ToolBar);
             Controls.Add(FileListView);
             Name = "SigcheckFrontEndMainForm";
             Text = "Sigcheck Front End";
+            ToolBar.ResumeLayout(false);
+            ToolBar.PerformLayout();
             ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion
@@ -149,5 +171,16 @@ namespace SigcheckFrontEnd
         private ColumnHeader FilePathHeader;
         private ColumnHeader DigitalSignHeader;
         private ColumnHeader DateHeader;
+        private ColumnHeader PublisherHeader;
+        private ImageList FileListViewSmallImageList;
+        private ColumnHeader DescriptionHeader;
+        private ColumnHeader ProductHeader;
+        private ColumnHeader FileVersionHeader;
+        private ColumnHeader ProductVersionHeader;
+        private ColumnHeader CopyrightHeader;
+        private ToolStrip ToolBar;
+        private ToolStripButton ClearAllButton;
+        private ToolStripTextBox FilterTextBox;
+        private System.Windows.Forms.Timer FilterTimer;
     }
 }
