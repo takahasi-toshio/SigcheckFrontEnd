@@ -48,7 +48,10 @@ namespace SigcheckFrontEnd
             ClearAllButton = new ToolStripButton();
             FilterTextBox = new ToolStripTextBox();
             FilterTimer = new System.Windows.Forms.Timer(components);
+            StatusBar = new StatusStrip();
+            ProgressBar = new ToolStripProgressBar();
             ToolBar.SuspendLayout();
+            StatusBar.SuspendLayout();
             SuspendLayout();
             // 
             // FilePathHeader
@@ -62,8 +65,9 @@ namespace SigcheckFrontEnd
             FileListView.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             FileListView.Columns.AddRange(new ColumnHeader[] { FilePathHeader, DigitalSignHeader, DateHeader, PublisherHeader, DescriptionHeader, FileVersionHeader, ProductHeader, ProductVersionHeader, CopyrightHeader });
             FileListView.Location = new Point(0, 28);
+            FileListView.Margin = new Padding(0);
             FileListView.Name = "FileListView";
-            FileListView.Size = new Size(1264, 734);
+            FileListView.Size = new Size(1264, 435);
             FileListView.SmallImageList = FileListViewSmallImageList;
             FileListView.TabIndex = 0;
             FileListView.UseCompatibleStateImageBehavior = false;
@@ -150,17 +154,36 @@ namespace SigcheckFrontEnd
             FilterTimer.Interval = 1000;
             FilterTimer.Tick += FilterTimer_Tick;
             // 
+            // StatusBar
+            // 
+            StatusBar.Items.AddRange(new ToolStripItem[] { ProgressBar });
+            StatusBar.Location = new Point(0, 466);
+            StatusBar.Name = "StatusBar";
+            StatusBar.Size = new Size(1264, 22);
+            StatusBar.TabIndex = 2;
+            StatusBar.Text = "statusStrip1";
+            // 
+            // ProgressBar
+            // 
+            ProgressBar.Name = "ProgressBar";
+            ProgressBar.Size = new Size(100, 16);
+            ProgressBar.Style = ProgressBarStyle.Marquee;
+            ProgressBar.Visible = false;
+            // 
             // SigcheckFrontEndMainForm
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1264, 761);
+            ClientSize = new Size(1264, 488);
+            Controls.Add(StatusBar);
             Controls.Add(ToolBar);
             Controls.Add(FileListView);
             Name = "SigcheckFrontEndMainForm";
             Text = "Sigcheck Front End";
             ToolBar.ResumeLayout(false);
             ToolBar.PerformLayout();
+            StatusBar.ResumeLayout(false);
+            StatusBar.PerformLayout();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -182,5 +205,7 @@ namespace SigcheckFrontEnd
         private ToolStripButton ClearAllButton;
         private ToolStripTextBox FilterTextBox;
         private System.Windows.Forms.Timer FilterTimer;
+        private StatusStrip StatusBar;
+        private ToolStripProgressBar ProgressBar;
     }
 }
