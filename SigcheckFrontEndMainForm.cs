@@ -78,6 +78,24 @@ namespace SigcheckFrontEnd
 
         protected bool IsMatch(ListViewItem item)
         {
+            if (ShowDigitalSignTargetOnlyButton.Checked)
+            {
+                string[] extensions = { ".appx", ".msix", ".appxbundle", ".msixbundle", ".cab", ".dll", ".exe", ".js", ".vbs", ".wsf", "msi", ".msp", ".mst", ".ocx", ".ps1", ".stl", ".sys" };
+                bool bFound = false;
+                foreach (var extension in extensions)
+                {
+                    if (item.Text.EndsWith(extension, StringComparison.OrdinalIgnoreCase))
+                    {
+                        bFound = true;
+                        break;
+                    }
+                }
+                if (!bFound)
+                {
+                    return false;
+                }
+            }
+
             string filter = FilterTextBox.Text;
             if (filter.Length == 0)
             {
@@ -195,5 +213,11 @@ namespace SigcheckFrontEnd
         }
 
         private List<ListViewItem> FullFileListViewItems = new List<ListViewItem>();
+
+        private void ShowDigitalSignTargetOnlyButton_CheckedChanged(object sender, EventArgs e)
+        {
+            FilterTimer.Stop();
+            FilterTimer.Start();
+        }
     }
 }

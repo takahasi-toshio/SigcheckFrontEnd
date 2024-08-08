@@ -48,6 +48,7 @@ namespace SigcheckFrontEnd
             ClearAllButton = new ToolStripButton();
             FilterTextBox = new ToolStripTextBox();
             FilterTypeComboBox = new ToolStripComboBox();
+            ShowDigitalSignTargetOnlyButton = new ToolStripButton();
             FilterTimer = new System.Windows.Forms.Timer(components);
             StatusBar = new StatusStrip();
             ItemCountLabel = new ToolStripStatusLabel();
@@ -126,7 +127,7 @@ namespace SigcheckFrontEnd
             // 
             // ToolBar
             // 
-            ToolBar.Items.AddRange(new ToolStripItem[] { ClearAllButton, FilterTextBox, FilterTypeComboBox });
+            ToolBar.Items.AddRange(new ToolStripItem[] { ClearAllButton, FilterTextBox, FilterTypeComboBox, ShowDigitalSignTargetOnlyButton });
             ToolBar.Location = new Point(0, 0);
             ToolBar.Name = "ToolBar";
             ToolBar.Size = new Size(1264, 25);
@@ -158,6 +159,18 @@ namespace SigcheckFrontEnd
             FilterTypeComboBox.Name = "FilterTypeComboBox";
             FilterTypeComboBox.Size = new Size(121, 25);
             FilterTypeComboBox.SelectedIndexChanged += FilterTypeComboBoxChanged;
+            // 
+            // ShowDigitalSignTargetOnlyButton
+            // 
+            ShowDigitalSignTargetOnlyButton.CheckOnClick = true;
+            ShowDigitalSignTargetOnlyButton.DisplayStyle = ToolStripItemDisplayStyle.Image;
+            ShowDigitalSignTargetOnlyButton.Image = (Image)resources.GetObject("ShowDigitalSignTargetOnlyButton.Image");
+            ShowDigitalSignTargetOnlyButton.ImageTransparentColor = Color.Magenta;
+            ShowDigitalSignTargetOnlyButton.Name = "ShowDigitalSignTargetOnlyButton";
+            ShowDigitalSignTargetOnlyButton.Size = new Size(23, 22);
+            ShowDigitalSignTargetOnlyButton.Text = "デジタル署名の付与対象のみ表示";
+            ShowDigitalSignTargetOnlyButton.ToolTipText = "デジタル署名の付与対象のみ表示";
+            ShowDigitalSignTargetOnlyButton.CheckedChanged += ShowDigitalSignTargetOnlyButton_CheckedChanged;
             // 
             // FilterTimer
             // 
@@ -225,5 +238,6 @@ namespace SigcheckFrontEnd
         private ToolStripProgressBar ProgressBar;
         private ToolStripComboBox FilterTypeComboBox;
         private ToolStripStatusLabel ItemCountLabel;
+        private ToolStripButton ShowDigitalSignTargetOnlyButton;
     }
 }
