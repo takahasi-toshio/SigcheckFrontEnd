@@ -219,5 +219,29 @@ namespace SigcheckFrontEnd
             FilterTimer.Stop();
             FilterTimer.Start();
         }
+
+        private void FileListViewCopyMenuItem_Click(object sender, EventArgs e)
+        {
+            var selectedItems = FileListView.SelectedItems;
+            if (selectedItems.Count > 0)
+            {
+                string text = "";
+                for (int i = 0; i < selectedItems.Count; ++i)
+                {
+                    var item = selectedItems[i];
+                    text += item.Text;
+                    var subItems = item.SubItems;
+                    for (int j = 0; j < subItems.Count; ++j)
+                    {
+                        var subItem = subItems[j];
+                        text += "\t";
+                        text += subItem.Text;
+                    }
+                    text += "\n";
+                }
+
+                Clipboard.SetText(text);
+            }
+        }
     }
 }

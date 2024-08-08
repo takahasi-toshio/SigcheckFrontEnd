@@ -117,6 +117,9 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <metadata name="FileListViewMenu.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>515, 17</value>
+  </metadata>
   <metadata name="FileListViewSmallImageList.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>17, 17</value>
   </metadata>
@@ -125,7 +128,7 @@
         AAEAAAD/////AQAAAAAAAAAMAgAAAEZTeXN0ZW0uV2luZG93cy5Gb3JtcywgQ3VsdHVyZT1uZXV0cmFs
         LCBQdWJsaWNLZXlUb2tlbj1iNzdhNWM1NjE5MzRlMDg5BQEAAAAmU3lzdGVtLldpbmRvd3MuRm9ybXMu
         SW1hZ2VMaXN0U3RyZWFtZXIBAAAABERhdGEHAgIAAAAJAwAAAA8DAAAAWggAAAJNU0Z0AUkBTAIBAQIB
-        AAFgAQEBYAEBARABAAEQAQAE/wEhAQAI/wFCAU0BNgcAATYDAAEoAwABQAMAARADAAEBAQABIAYAARBi
+        AAGAAQEBgAEBARABAAEQAQAE/wEhAQAI/wFCAU0BNgcAATYDAAEoAwABQAMAARADAAEBAQABIAYAARBi
         AAMhATADRgF/A1oBvwJZAWcB7wJZAWcB7wNaAb8CSwFMAY8DIQEwkAABUAFRAVABnwFQAVEBUAGfAVAB
         UQFQAZ8BUAFRAVABnwFQAVEBUAGfAVABUQFQAZ8BUAFRAVABnwFQAVEBUAGfAVABUQFQAZ8BUAFRAVAB
         nwFQAVEBUAGfAVABUQFQAZ8DGAEgGAACQAFBAXACAAL/AgAC/wIAAv8CAAL/AgAC/wIAAv8CAAL/AlkB
@@ -180,11 +183,11 @@
   <data name="ShowDigitalSignTargetOnlyButton.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAD3SURBVDhPlZPLEYJAEEQJwQw0AssQvPE7YBGBIZiBIXjz
-        agiGYAiEQAiGoP2WXRxYQO2qLmR6XvNRk7GKotjVdb0uy/I149avxgLOsuwpbyfA3n59qACz8HeBhfFS
-        AXse+0gFR4UnzGcKLRQMnOf5gTxN042DFew1fFhr1loQBxiQHc5dicL9eHlse2UdLzpeNb9VVbX6WmBh
-        +SzfNW8cHB7BAtZzcP/8SIPJgp9gpOHcHfCNRDBzj3bSYLKAZUDuROc9TObRThpEBUBkFPDWLYwdGKRB
-        VABIxpsmp8TmDgxiwYbe/JAaf/vjbFjgrxItLdj8nZPkDU7VTjZj+orQAAAAAElFTkSuQmCC
+        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAD5SURBVDhPlZNLEcJAEEQjAQdEAYUEbvkdQkUBEnCABG5c
+        kYAEJCABCUiAfpvZMGQJn67qCpmZ1zuEkI1V1/Wy67p50zT3CV9tNBVwURS3siwXb8DBNv6qCDPwd4CH
+        8acA5gx7SgEbNbeYzwR6KBq4qqq1HZgHWI2Vimdv1a4exBEGZIb7EKLmajw8doQ5Wde9rgfVj23bzr4G
+        eFjeySfVLwGOX8ED3lNwWD1KhbcBP8FIxakN+EUSmLqhvVSY2iAHZBPdDzA9Q3upkAQA0SOAp+5hHMAo
+        FZIAQHo8afqE+H4AoxjwTTMvEmsPr7e3ob3slGTog93fOcse7gBODNeRrXAAAAAASUVORK5CYII=
 </value>
   </data>
   <metadata name="FilterTimer.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">

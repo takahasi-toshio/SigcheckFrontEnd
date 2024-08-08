@@ -43,6 +43,8 @@ namespace SigcheckFrontEnd
             ProductHeader = new ColumnHeader();
             ProductVersionHeader = new ColumnHeader();
             CopyrightHeader = new ColumnHeader();
+            FileListViewMenu = new ContextMenuStrip(components);
+            FileListViewCopyMenuItem = new ToolStripMenuItem();
             FileListViewSmallImageList = new ImageList(components);
             ToolBar = new ToolStrip();
             ClearAllButton = new ToolStripButton();
@@ -53,6 +55,7 @@ namespace SigcheckFrontEnd
             StatusBar = new StatusStrip();
             ItemCountLabel = new ToolStripStatusLabel();
             ProgressBar = new ToolStripProgressBar();
+            FileListViewMenu.SuspendLayout();
             ToolBar.SuspendLayout();
             StatusBar.SuspendLayout();
             SuspendLayout();
@@ -67,6 +70,8 @@ namespace SigcheckFrontEnd
             FileListView.AllowDrop = true;
             FileListView.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             FileListView.Columns.AddRange(new ColumnHeader[] { FilePathHeader, DigitalSignHeader, DateHeader, PublisherHeader, DescriptionHeader, FileVersionHeader, ProductHeader, ProductVersionHeader, CopyrightHeader });
+            FileListView.ContextMenuStrip = FileListViewMenu;
+            FileListView.FullRowSelect = true;
             FileListView.Location = new Point(0, 28);
             FileListView.Margin = new Padding(0);
             FileListView.Name = "FileListView";
@@ -116,6 +121,20 @@ namespace SigcheckFrontEnd
             // CopyrightHeader
             // 
             CopyrightHeader.Text = "著作権";
+            // 
+            // FileListViewMenu
+            // 
+            FileListViewMenu.Items.AddRange(new ToolStripItem[] { FileListViewCopyMenuItem });
+            FileListViewMenu.Name = "FileListViewMenu";
+            FileListViewMenu.Size = new Size(140, 26);
+            // 
+            // FileListViewCopyMenuItem
+            // 
+            FileListViewCopyMenuItem.Name = "FileListViewCopyMenuItem";
+            FileListViewCopyMenuItem.ShortcutKeys = Keys.Control | Keys.C;
+            FileListViewCopyMenuItem.Size = new Size(139, 22);
+            FileListViewCopyMenuItem.Text = "コピー";
+            FileListViewCopyMenuItem.Click += FileListViewCopyMenuItem_Click;
             // 
             // FileListViewSmallImageList
             // 
@@ -209,6 +228,7 @@ namespace SigcheckFrontEnd
             Controls.Add(FileListView);
             Name = "SigcheckFrontEndMainForm";
             Text = "Sigcheck Front End";
+            FileListViewMenu.ResumeLayout(false);
             ToolBar.ResumeLayout(false);
             ToolBar.PerformLayout();
             StatusBar.ResumeLayout(false);
@@ -239,5 +259,7 @@ namespace SigcheckFrontEnd
         private ToolStripComboBox FilterTypeComboBox;
         private ToolStripStatusLabel ItemCountLabel;
         private ToolStripButton ShowDigitalSignTargetOnlyButton;
+        private ContextMenuStrip FileListViewMenu;
+        private ToolStripMenuItem FileListViewCopyMenuItem;
     }
 }
