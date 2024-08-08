@@ -47,8 +47,10 @@ namespace SigcheckFrontEnd
             ToolBar = new ToolStrip();
             ClearAllButton = new ToolStripButton();
             FilterTextBox = new ToolStripTextBox();
+            FilterTypeComboBox = new ToolStripComboBox();
             FilterTimer = new System.Windows.Forms.Timer(components);
             StatusBar = new StatusStrip();
+            ItemCountLabel = new ToolStripStatusLabel();
             ProgressBar = new ToolStripProgressBar();
             ToolBar.SuspendLayout();
             StatusBar.SuspendLayout();
@@ -124,7 +126,7 @@ namespace SigcheckFrontEnd
             // 
             // ToolBar
             // 
-            ToolBar.Items.AddRange(new ToolStripItem[] { ClearAllButton, FilterTextBox });
+            ToolBar.Items.AddRange(new ToolStripItem[] { ClearAllButton, FilterTextBox, FilterTypeComboBox });
             ToolBar.Location = new Point(0, 0);
             ToolBar.Name = "ToolBar";
             ToolBar.Size = new Size(1264, 25);
@@ -149,6 +151,14 @@ namespace SigcheckFrontEnd
             FilterTextBox.ToolTipText = "絞り込み";
             FilterTextBox.TextChanged += FilterTextBoxTextChanged;
             // 
+            // FilterTypeComboBox
+            // 
+            FilterTypeComboBox.DropDownStyle = ComboBoxStyle.DropDownList;
+            FilterTypeComboBox.Items.AddRange(new object[] { "を含む", "で終わる", "から始まる" });
+            FilterTypeComboBox.Name = "FilterTypeComboBox";
+            FilterTypeComboBox.Size = new Size(121, 25);
+            FilterTypeComboBox.SelectedIndexChanged += FilterTypeComboBoxChanged;
+            // 
             // FilterTimer
             // 
             FilterTimer.Interval = 1000;
@@ -156,12 +166,18 @@ namespace SigcheckFrontEnd
             // 
             // StatusBar
             // 
-            StatusBar.Items.AddRange(new ToolStripItem[] { ProgressBar });
+            StatusBar.Items.AddRange(new ToolStripItem[] { ItemCountLabel, ProgressBar });
             StatusBar.Location = new Point(0, 466);
             StatusBar.Name = "StatusBar";
             StatusBar.Size = new Size(1264, 22);
             StatusBar.TabIndex = 2;
             StatusBar.Text = "statusStrip1";
+            // 
+            // ItemCountLabel
+            // 
+            ItemCountLabel.Name = "ItemCountLabel";
+            ItemCountLabel.Size = new Size(32, 17);
+            ItemCountLabel.Text = "(0/0)";
             // 
             // ProgressBar
             // 
@@ -207,5 +223,7 @@ namespace SigcheckFrontEnd
         private System.Windows.Forms.Timer FilterTimer;
         private StatusStrip StatusBar;
         private ToolStripProgressBar ProgressBar;
+        private ToolStripComboBox FilterTypeComboBox;
+        private ToolStripStatusLabel ItemCountLabel;
     }
 }

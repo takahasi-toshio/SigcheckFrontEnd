@@ -8,18 +8,20 @@ namespace SigcheckFrontEnd
         public SigcheckFrontEndMainForm()
         {
             InitializeComponent();
+            FilterTypeComboBox.SelectedIndex = 0;
         }
 
         private void ClearAllButton_Click(object sender, EventArgs e)
         {
             FileListView.Items.Clear();
             FullFileListViewItems.Clear();
+            UpdateItemCount();
         }
 
         private void FilterTimer_Tick(object sender, EventArgs e)
         {
             FilterTimer.Stop();
-            DoFilter(FilterTextBox.Text);
+            DoFilter();
         }
 
         protected void FileListViewDragEnter(object s, DragEventArgs e)
@@ -29,33 +31,27 @@ namespace SigcheckFrontEnd
 
         protected async void FileListViewDragDrop(object s, DragEventArgs e)
         {
-            var data = e.Data;
-            if (data != null)
+            var paths = e.Data?.GetData(DataFormats.FileDrop);
+            if (paths != null)
             {
-                if (data.GetDataPresent(DataFormats.FileDrop))
+                FileListView.AllowDrop = false;
+                ProgressBar.Visible = true;
+                foreach (string path in (string[])paths)
                 {
-                    var paths = data.GetData(DataFormats.FileDrop);
-                    if (paths != null)
+                    List<ListViewItem> items = await RunSigcheck(path);
+                    foreach (var item in items)
                     {
-                        var filter = FilterTextBox.Text;
-                        FileListView.AllowDrop = false;
-                        ProgressBar.Visible = true;
-                        foreach (string path in (string[])paths)
+                        FullFileListViewItems.Add(item);
+                        if (IsMatch(item))
                         {
-                            List<ListViewItem> items = await RunSigcheck(path);
-                            foreach (var item in items)
-                            {
-                                FullFileListViewItems.Add(item);
-                                if ((filter.Length == 0) || (item.Text.Contains(filter, StringComparison.OrdinalIgnoreCase)))
-                                {
-                                    FileListView.Items.Add(item);
-                                }
-                            }
+                            FileListView.Items.Add(item);
                         }
-                        ProgressBar.Visible = false;
-                        FileListView.AllowDrop = true;
                     }
                 }
+                ProgressBar.Visible = false;
+                FileListView.AllowDrop = true;
+                FileListView.AutoResizeColumns(ColumnHeaderAutoResizeStyle.ColumnContent);
+                UpdateItemCount();
             }
         }
 
@@ -65,16 +61,38 @@ namespace SigcheckFrontEnd
             FilterTimer.Start();
         }
 
-        protected void DoFilter(string filter)
+        protected void DoFilter()
         {
             FileListView.Items.Clear();
 
             foreach (var item in FullFileListViewItems)
             {
-                if ((filter.Length == 0) || (item.Text.Contains(filter, StringComparison.OrdinalIgnoreCase)))
+                if (IsMatch(item))
                 {
                     FileListView.Items.Add(item);
                 }
+            }
+
+            UpdateItemCount();
+        }
+
+        protected bool IsMatch(ListViewItem item)
+        {
+            string filter = FilterTextBox.Text;
+            if (filter.Length == 0)
+            {
+                return true;
+            }
+
+            switch (FilterTypeComboBox.SelectedIndex)
+            {
+                case 1:
+                    return item.Text.EndsWith(filter, StringComparison.OrdinalIgnoreCase);
+                case 2:
+                    return item.Text.StartsWith(filter, StringComparison.OrdinalIgnoreCase);
+                default:
+                    return item.Text.Contains(filter, StringComparison.OrdinalIgnoreCase);
+
             }
         }
 
@@ -161,6 +179,19 @@ namespace SigcheckFrontEnd
             }
 
             return ret;
+        }
+
+        private void FilterTypeComboBoxChanged(object sender, EventArgs e)
+        {
+            FilterTimer.Stop();
+            FilterTimer.Start();
+        }
+
+        private void UpdateItemCount()
+        {
+            int countAll = FullFileListViewItems.Count;
+            int countVisible = FileListView.Items.Count;
+            ItemCountLabel.Text = $"({countVisible}/{countAll})";
         }
 
         private List<ListViewItem> FullFileListViewItems = new List<ListViewItem>();
