@@ -45,6 +45,7 @@ namespace SigcheckFrontEnd
             CopyrightHeader = new ColumnHeader();
             FileListViewMenu = new ContextMenuStrip(components);
             FileListViewCopyMenuItem = new ToolStripMenuItem();
+            FileListViewSelectAllMenuItem = new ToolStripMenuItem();
             FileListViewSmallImageList = new ImageList(components);
             ToolBar = new ToolStrip();
             ClearAllButton = new ToolStripButton();
@@ -55,7 +56,6 @@ namespace SigcheckFrontEnd
             StatusBar = new StatusStrip();
             ItemCountLabel = new ToolStripStatusLabel();
             ProgressBar = new ToolStripProgressBar();
-            FileListViewSelectAllMenuItem = new ToolStripMenuItem();
             FileListViewMenu.SuspendLayout();
             ToolBar.SuspendLayout();
             StatusBar.SuspendLayout();
@@ -127,15 +127,23 @@ namespace SigcheckFrontEnd
             // 
             FileListViewMenu.Items.AddRange(new ToolStripItem[] { FileListViewCopyMenuItem, FileListViewSelectAllMenuItem });
             FileListViewMenu.Name = "FileListViewMenu";
-            FileListViewMenu.Size = new Size(181, 70);
+            FileListViewMenu.Size = new Size(169, 48);
             // 
             // FileListViewCopyMenuItem
             // 
             FileListViewCopyMenuItem.Name = "FileListViewCopyMenuItem";
             FileListViewCopyMenuItem.ShortcutKeys = Keys.Control | Keys.C;
-            FileListViewCopyMenuItem.Size = new Size(180, 22);
+            FileListViewCopyMenuItem.Size = new Size(168, 22);
             FileListViewCopyMenuItem.Text = "コピー";
             FileListViewCopyMenuItem.Click += FileListViewCopyMenuItem_Click;
+            // 
+            // FileListViewSelectAllMenuItem
+            // 
+            FileListViewSelectAllMenuItem.Name = "FileListViewSelectAllMenuItem";
+            FileListViewSelectAllMenuItem.ShortcutKeys = Keys.Control | Keys.A;
+            FileListViewSelectAllMenuItem.Size = new Size(168, 22);
+            FileListViewSelectAllMenuItem.Text = "すべて選択";
+            FileListViewSelectAllMenuItem.Click += FileListViewSelectAllMenuItem_Click;
             // 
             // FileListViewSmallImageList
             // 
@@ -219,14 +227,6 @@ namespace SigcheckFrontEnd
             ProgressBar.Style = ProgressBarStyle.Marquee;
             ProgressBar.Visible = false;
             // 
-            // FileListViewSelectAllMenuItem
-            // 
-            FileListViewSelectAllMenuItem.Name = "FileListViewSelectAllMenuItem";
-            FileListViewSelectAllMenuItem.ShortcutKeys = Keys.Control | Keys.A;
-            FileListViewSelectAllMenuItem.Size = new Size(180, 22);
-            FileListViewSelectAllMenuItem.Text = "すべて選択";
-            FileListViewSelectAllMenuItem.Click += FileListViewSelectAllMenuItem_Click;
-            // 
             // SigcheckFrontEndMainForm
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -237,6 +237,8 @@ namespace SigcheckFrontEnd
             Controls.Add(FileListView);
             Name = "SigcheckFrontEndMainForm";
             Text = "Sigcheck Front End";
+            Load += SigcheckFrontEndMainForm_Load;
+            FormClosing += SigcheckFrontEndMainForm_FormClosing;
             FileListViewMenu.ResumeLayout(false);
             ToolBar.ResumeLayout(false);
             ToolBar.PerformLayout();

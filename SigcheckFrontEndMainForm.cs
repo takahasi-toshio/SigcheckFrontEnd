@@ -254,5 +254,35 @@ namespace SigcheckFrontEnd
                 items[i].Selected = true;
             }
         }
+
+        private void SigcheckFrontEndMainForm_Load(object sender, EventArgs e)
+        {
+            var rect = new Rectangle(Properties.Settings.Default.Location, Properties.Settings.Default.Size);
+            foreach (var screen in Screen.AllScreens)
+            {
+                if (screen.Bounds.Contains(rect))
+                {
+                    Location = rect.Location;
+                    Size = rect.Size;
+                    switch (Properties.Settings.Default.WindowState)
+                    {
+                        case 2:
+                            WindowState = FormWindowState.Maximized;
+                            break;
+                        default:
+                            break;
+                    }
+                    break;
+                }
+            }
+        }
+
+        private void SigcheckFrontEndMainForm_FormClosing(object sender, EventArgs e)
+        {
+            Properties.Settings.Default.Location = RestoreBounds.Location; ;
+            Properties.Settings.Default.Size = RestoreBounds.Size;
+            Properties.Settings.Default.WindowState = (int)WindowState;
+            Properties.Settings.Default.Save();
+        }
     }
 }
