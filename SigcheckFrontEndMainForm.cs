@@ -260,7 +260,7 @@ namespace SigcheckFrontEnd
             var rect = new Rectangle(Properties.Settings.Default.Location, Properties.Settings.Default.Size);
             foreach (var screen in Screen.AllScreens)
             {
-                if (screen.Bounds.Contains(rect))
+                if (screen.Bounds.IntersectsWith(rect))
                 {
                     Location = rect.Location;
                     Size = rect.Size;
@@ -279,8 +279,16 @@ namespace SigcheckFrontEnd
 
         private void SigcheckFrontEndMainForm_FormClosing(object sender, EventArgs e)
         {
-            Properties.Settings.Default.Location = RestoreBounds.Location; ;
-            Properties.Settings.Default.Size = RestoreBounds.Size;
+            if (WindowState != FormWindowState.Normal)
+            {
+                Properties.Settings.Default.Location = RestoreBounds.Location; ;
+                Properties.Settings.Default.Size = RestoreBounds.Size;
+            }
+            else
+            {
+                Properties.Settings.Default.Location = Location; ;
+                Properties.Settings.Default.Size = Size;
+            }
             Properties.Settings.Default.WindowState = (int)WindowState;
             Properties.Settings.Default.Save();
         }
