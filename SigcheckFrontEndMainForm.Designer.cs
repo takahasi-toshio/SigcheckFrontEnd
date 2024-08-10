@@ -55,6 +55,7 @@ namespace SigcheckFrontEnd
             StatusBar = new StatusStrip();
             ItemCountLabel = new ToolStripStatusLabel();
             ProgressBar = new ToolStripProgressBar();
+            FileListViewSelectAllMenuItem = new ToolStripMenuItem();
             FileListViewMenu.SuspendLayout();
             ToolBar.SuspendLayout();
             StatusBar.SuspendLayout();
@@ -124,15 +125,15 @@ namespace SigcheckFrontEnd
             // 
             // FileListViewMenu
             // 
-            FileListViewMenu.Items.AddRange(new ToolStripItem[] { FileListViewCopyMenuItem });
+            FileListViewMenu.Items.AddRange(new ToolStripItem[] { FileListViewCopyMenuItem, FileListViewSelectAllMenuItem });
             FileListViewMenu.Name = "FileListViewMenu";
-            FileListViewMenu.Size = new Size(140, 26);
+            FileListViewMenu.Size = new Size(181, 70);
             // 
             // FileListViewCopyMenuItem
             // 
             FileListViewCopyMenuItem.Name = "FileListViewCopyMenuItem";
             FileListViewCopyMenuItem.ShortcutKeys = Keys.Control | Keys.C;
-            FileListViewCopyMenuItem.Size = new Size(139, 22);
+            FileListViewCopyMenuItem.Size = new Size(180, 22);
             FileListViewCopyMenuItem.Text = "コピー";
             FileListViewCopyMenuItem.Click += FileListViewCopyMenuItem_Click;
             // 
@@ -218,6 +219,14 @@ namespace SigcheckFrontEnd
             ProgressBar.Style = ProgressBarStyle.Marquee;
             ProgressBar.Visible = false;
             // 
+            // FileListViewSelectAllMenuItem
+            // 
+            FileListViewSelectAllMenuItem.Name = "FileListViewSelectAllMenuItem";
+            FileListViewSelectAllMenuItem.ShortcutKeys = Keys.Control | Keys.A;
+            FileListViewSelectAllMenuItem.Size = new Size(180, 22);
+            FileListViewSelectAllMenuItem.Text = "すべて選択";
+            FileListViewSelectAllMenuItem.Click += FileListViewSelectAllMenuItem_Click;
+            // 
             // SigcheckFrontEndMainForm
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -261,5 +270,6 @@ namespace SigcheckFrontEnd
         private ToolStripButton ShowDigitalSignTargetOnlyButton;
         private ContextMenuStrip FileListViewMenu;
         private ToolStripMenuItem FileListViewCopyMenuItem;
+        private ToolStripMenuItem FileListViewSelectAllMenuItem;
     }
 }

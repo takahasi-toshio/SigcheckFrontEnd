@@ -229,18 +229,29 @@ namespace SigcheckFrontEnd
                 for (int i = 0; i < selectedItems.Count; ++i)
                 {
                     var item = selectedItems[i];
-                    text += item.Text;
                     var subItems = item.SubItems;
                     for (int j = 0; j < subItems.Count; ++j)
                     {
                         var subItem = subItems[j];
-                        text += "\t";
+                        if (j != 0)
+                        {
+                            text += "\t";
+                        }
                         text += subItem.Text;
                     }
                     text += "\n";
                 }
 
                 Clipboard.SetText(text);
+            }
+        }
+
+        private void FileListViewSelectAllMenuItem_Click(object sender, EventArgs e)
+        {
+            var items = FileListView.Items;
+            for (int i = 0; i < items.Count; ++i)
+            {
+                items[i].Selected = true;
             }
         }
     }
