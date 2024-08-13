@@ -67,8 +67,8 @@ namespace SigcheckFrontEnd
             // 
             // FileListView
             // 
-            FileListView.AllowDrop = true;
             resources.ApplyResources(FileListView, "FileListView");
+            FileListView.AllowDrop = true;
             FileListView.Columns.AddRange(new ColumnHeader[] { FilePathHeader, DigitalSignHeader, DateHeader, PublisherHeader, DescriptionHeader, FileVersionHeader, ProductHeader, ProductVersionHeader, CopyrightHeader });
             FileListView.ContextMenuStrip = FileListViewMenu;
             FileListView.FullRowSelect = true;
@@ -113,20 +113,20 @@ namespace SigcheckFrontEnd
             // 
             // FileListViewMenu
             // 
+            resources.ApplyResources(FileListViewMenu, "FileListViewMenu");
             FileListViewMenu.Items.AddRange(new ToolStripItem[] { FileListViewCopyMenuItem, FileListViewSelectAllMenuItem });
             FileListViewMenu.Name = "FileListViewMenu";
-            resources.ApplyResources(FileListViewMenu, "FileListViewMenu");
             // 
             // FileListViewCopyMenuItem
             // 
-            FileListViewCopyMenuItem.Name = "FileListViewCopyMenuItem";
             resources.ApplyResources(FileListViewCopyMenuItem, "FileListViewCopyMenuItem");
+            FileListViewCopyMenuItem.Name = "FileListViewCopyMenuItem";
             FileListViewCopyMenuItem.Click += FileListViewCopyMenuItem_Click;
             // 
             // FileListViewSelectAllMenuItem
             // 
-            FileListViewSelectAllMenuItem.Name = "FileListViewSelectAllMenuItem";
             resources.ApplyResources(FileListViewSelectAllMenuItem, "FileListViewSelectAllMenuItem");
+            FileListViewSelectAllMenuItem.Name = "FileListViewSelectAllMenuItem";
             FileListViewSelectAllMenuItem.Click += FileListViewSelectAllMenuItem_Click;
             // 
             // FileListViewSmallImageList
@@ -139,36 +139,36 @@ namespace SigcheckFrontEnd
             // 
             // ToolBar
             // 
-            ToolBar.Items.AddRange(new ToolStripItem[] { ClearAllButton, FilterTextBox, FilterTypeComboBox, ShowDigitalSignTargetOnlyButton });
             resources.ApplyResources(ToolBar, "ToolBar");
+            ToolBar.Items.AddRange(new ToolStripItem[] { ClearAllButton, FilterTextBox, FilterTypeComboBox, ShowDigitalSignTargetOnlyButton });
             ToolBar.Name = "ToolBar";
             // 
             // ClearAllButton
             // 
-            ClearAllButton.DisplayStyle = ToolStripItemDisplayStyle.Image;
             resources.ApplyResources(ClearAllButton, "ClearAllButton");
+            ClearAllButton.DisplayStyle = ToolStripItemDisplayStyle.Image;
             ClearAllButton.Name = "ClearAllButton";
             ClearAllButton.Click += ClearAllButton_Click;
             // 
             // FilterTextBox
             // 
-            FilterTextBox.Name = "FilterTextBox";
             resources.ApplyResources(FilterTextBox, "FilterTextBox");
+            FilterTextBox.Name = "FilterTextBox";
             FilterTextBox.TextChanged += FilterTextBoxTextChanged;
             // 
             // FilterTypeComboBox
             // 
+            resources.ApplyResources(FilterTypeComboBox, "FilterTypeComboBox");
             FilterTypeComboBox.DropDownStyle = ComboBoxStyle.DropDownList;
             FilterTypeComboBox.Items.AddRange(new object[] { resources.GetString("FilterTypeComboBox.Items"), resources.GetString("FilterTypeComboBox.Items1"), resources.GetString("FilterTypeComboBox.Items2") });
             FilterTypeComboBox.Name = "FilterTypeComboBox";
-            resources.ApplyResources(FilterTypeComboBox, "FilterTypeComboBox");
             FilterTypeComboBox.SelectedIndexChanged += FilterTypeComboBoxChanged;
             // 
             // ShowDigitalSignTargetOnlyButton
             // 
+            resources.ApplyResources(ShowDigitalSignTargetOnlyButton, "ShowDigitalSignTargetOnlyButton");
             ShowDigitalSignTargetOnlyButton.CheckOnClick = true;
             ShowDigitalSignTargetOnlyButton.DisplayStyle = ToolStripItemDisplayStyle.Image;
-            resources.ApplyResources(ShowDigitalSignTargetOnlyButton, "ShowDigitalSignTargetOnlyButton");
             ShowDigitalSignTargetOnlyButton.Name = "ShowDigitalSignTargetOnlyButton";
             ShowDigitalSignTargetOnlyButton.CheckedChanged += ShowDigitalSignTargetOnlyButton_CheckedChanged;
             // 
@@ -179,19 +179,19 @@ namespace SigcheckFrontEnd
             // 
             // StatusBar
             // 
-            StatusBar.Items.AddRange(new ToolStripItem[] { ItemCountLabel, ProgressBar });
             resources.ApplyResources(StatusBar, "StatusBar");
+            StatusBar.Items.AddRange(new ToolStripItem[] { ItemCountLabel, ProgressBar });
             StatusBar.Name = "StatusBar";
             // 
             // ItemCountLabel
             // 
-            ItemCountLabel.Name = "ItemCountLabel";
             resources.ApplyResources(ItemCountLabel, "ItemCountLabel");
+            ItemCountLabel.Name = "ItemCountLabel";
             // 
             // ProgressBar
             // 
-            ProgressBar.Name = "ProgressBar";
             resources.ApplyResources(ProgressBar, "ProgressBar");
+            ProgressBar.Name = "ProgressBar";
             ProgressBar.Style = ProgressBarStyle.Marquee;
             // 
             // SigcheckFrontEndMainForm

@@ -117,112 +117,184 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="FilePathHeader.Text" xml:space="preserve">
-    <value>ファイルパス</value>
+  <data name="&gt;&gt;ToolBar.Name" xml:space="preserve">
+    <value>ToolBar</value>
   </data>
   <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="FilePathHeader.Width" type="System.Int32, mscorlib">
-    <value>200</value>
+  <data name="ProgressBar.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
   </data>
-  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="FileListView.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Top, Bottom, Left, Right</value>
-  </data>
-  <data name="DigitalSignHeader.Text" xml:space="preserve">
-    <value>デジタル署名</value>
-  </data>
-  <data name="DigitalSignHeader.Width" type="System.Int32, mscorlib">
-    <value>100</value>
-  </data>
-  <data name="DateHeader.Text" xml:space="preserve">
-    <value>タイムスタンプ</value>
-  </data>
-  <data name="DateHeader.Width" type="System.Int32, mscorlib">
-    <value>100</value>
-  </data>
-  <data name="PublisherHeader.Text" xml:space="preserve">
-    <value>署名者名</value>
-  </data>
-  <data name="PublisherHeader.Width" type="System.Int32, mscorlib">
-    <value>100</value>
-  </data>
-  <data name="DescriptionHeader.Text" xml:space="preserve">
-    <value>ファイルの説明</value>
-  </data>
-  <data name="DescriptionHeader.Width" type="System.Int32, mscorlib">
-    <value>100</value>
-  </data>
-  <data name="FileVersionHeader.DisplayIndex" type="System.Int32, mscorlib">
-    <value>6</value>
-  </data>
-  <data name="FileVersionHeader.Text" xml:space="preserve">
-    <value>ファイルバージョン</value>
-  </data>
-  <data name="FileVersionHeader.Width" type="System.Int32, mscorlib">
-    <value>100</value>
-  </data>
-  <data name="ProductHeader.DisplayIndex" type="System.Int32, mscorlib">
-    <value>5</value>
-  </data>
-  <data name="ProductHeader.Text" xml:space="preserve">
-    <value>製品名</value>
+  <data name="&gt;&gt;ClearAllButton.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripButton, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="ProductVersionHeader.Text" xml:space="preserve">
     <value>プロダクトバージョン</value>
   </data>
-  <data name="CopyrightHeader.Text" xml:space="preserve">
-    <value>著作権</value>
+  <data name="&gt;&gt;FileListViewSmallImageList.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ImageList, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <metadata name="FileListViewMenu.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>515, 17</value>
-  </metadata>
-  <data name="FileListViewCopyMenuItem.ShortcutKeys" type="System.Windows.Forms.Keys, System.Windows.Forms">
-    <value>Ctrl+C</value>
+  <data name="&gt;&gt;DateHeader.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ColumnHeader, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="FileListViewCopyMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>168, 22</value>
+  <data name="&gt;&gt;ItemCountLabel.Name" xml:space="preserve">
+    <value>ItemCountLabel</value>
+  </data>
+  <data name="FileVersionHeader.DisplayIndex" type="System.Int32, mscorlib">
+    <value>6</value>
+  </data>
+  <data name="ShowDigitalSignTargetOnlyButton.Text" xml:space="preserve">
+    <value>Display only targets of digital signature</value>
+  </data>
+  <data name="StatusBar.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;ToolBar.Parent" xml:space="preserve">
+    <value>$this</value>
   </data>
   <data name="FileListViewCopyMenuItem.Text" xml:space="preserve">
     <value>コピー</value>
   </data>
-  <data name="FileListViewSelectAllMenuItem.ShortcutKeys" type="System.Windows.Forms.Keys, System.Windows.Forms">
-    <value>Ctrl+A</value>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="ToolBar.Size" type="System.Drawing.Size, System.Drawing">
+    <value>1264, 25</value>
   </data>
-  <data name="FileListViewSelectAllMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>168, 22</value>
+  <data name="PublisherHeader.Width" type="System.Int32, mscorlib">
+    <value>100</value>
   </data>
-  <data name="FileListViewSelectAllMenuItem.Text" xml:space="preserve">
-    <value>すべて選択</value>
+  <data name="&gt;&gt;DescriptionHeader.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ColumnHeader, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="FileListViewMenu.Size" type="System.Drawing.Size, System.Drawing">
-    <value>169, 48</value>
+  <data name="&gt;&gt;ToolBar.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;FileListViewCopyMenuItem.Name" xml:space="preserve">
+    <value>FileListViewCopyMenuItem</value>
+  </data>
+  <data name="&gt;&gt;FilterTypeComboBox.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripComboBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="ProductHeader.Text" xml:space="preserve">
+    <value>製品名</value>
+  </data>
+  <data name="FileVersionHeader.Width" type="System.Int32, mscorlib">
+    <value>100</value>
+  </data>
+  <data name="ClearAllButton.Text" xml:space="preserve">
+    <value>Delete All</value>
+  </data>
+  <data name="FilterTypeComboBox.Items1" xml:space="preserve">
+    <value>で終わる</value>
+  </data>
+  <data name="&gt;&gt;ProductHeader.Name" xml:space="preserve">
+    <value>ProductHeader</value>
+  </data>
+  <data name="ClearAllButton.Size" type="System.Drawing.Size, System.Drawing">
+    <value>23, 22</value>
   </data>
   <data name="&gt;&gt;FileListViewMenu.Name" xml:space="preserve">
     <value>FileListViewMenu</value>
   </data>
-  <data name="&gt;&gt;FileListViewMenu.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ContextMenuStrip, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="FilterTextBox.Size" type="System.Drawing.Size, System.Drawing">
+    <value>100, 25</value>
   </data>
-  <data name="FileListView.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 28</value>
+  <data name="FilterTypeComboBox.Size" type="System.Drawing.Size, System.Drawing">
+    <value>121, 25</value>
   </data>
-  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="FileListView.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>0, 0, 0, 0</value>
+  <data name="&gt;&gt;FileListViewSelectAllMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;DescriptionHeader.Name" xml:space="preserve">
+    <value>DescriptionHeader</value>
+  </data>
+  <data name="&gt;&gt;FileListViewSelectAllMenuItem.Name" xml:space="preserve">
+    <value>FileListViewSelectAllMenuItem</value>
+  </data>
+  <data name="StatusBar.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 466</value>
+  </data>
+  <data name="&gt;&gt;StatusBar.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;ProductVersionHeader.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ColumnHeader, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
+    <value>1264, 488</value>
+  </data>
+  <data name="&gt;&gt;ClearAllButton.Name" xml:space="preserve">
+    <value>ClearAllButton</value>
+  </data>
+  <data name="ProductHeader.DisplayIndex" type="System.Int32, mscorlib">
+    <value>5</value>
   </data>
   <data name="FileListView.Size" type="System.Drawing.Size, System.Drawing">
     <value>1264, 435</value>
   </data>
-  <metadata name="FileListViewSmallImageList.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>17, 17</value>
-  </metadata>
+  <data name="&gt;&gt;FileListView.Name" xml:space="preserve">
+    <value>FileListView</value>
+  </data>
+  <data name="FileListViewCopyMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>168, 22</value>
+  </data>
+  <data name="&gt;&gt;ItemCountLabel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripStatusLabel, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;ProgressBar.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripProgressBar, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="FilterTypeComboBox.Items2" xml:space="preserve">
+    <value>から始まる</value>
+  </data>
+  <data name="&gt;&gt;FileListViewCopyMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="FileListViewCopyMenuItem.ShortcutKeys" type="System.Windows.Forms.Keys, System.Windows.Forms">
+    <value>Ctrl+C</value>
+  </data>
+  <data name="&gt;&gt;FilePathHeader.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ColumnHeader, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;ProductHeader.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ColumnHeader, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="FileListViewMenu.Size" type="System.Drawing.Size, System.Drawing">
+    <value>169, 48</value>
+  </data>
+  <data name="&gt;&gt;CopyrightHeader.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ColumnHeader, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;DigitalSignHeader.Name" xml:space="preserve">
+    <value>DigitalSignHeader</value>
+  </data>
+  <data name="&gt;&gt;FilterTextBox.Name" xml:space="preserve">
+    <value>FilterTextBox</value>
+  </data>
+  <data name="&gt;&gt;PublisherHeader.Name" xml:space="preserve">
+    <value>PublisherHeader</value>
+  </data>
+  <data name="&gt;&gt;FilePathHeader.Name" xml:space="preserve">
+    <value>FilePathHeader</value>
+  </data>
+  <data name="ClearAllButton.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
+        wgAADsIBFShKgAAAANtJREFUOE+lkwENgzAURJEwCZOABCTMAQsgYA6QgIRJQAISkDAJSGD32P8rDYTB
+        uOTC5f/etf0NyRqqqnoURdHrOxoHsbb2NmS8makry7KBaGr0bFkMNdMZaxbLmHnNNLWn1+BkzvP8QvMf
+        ynv1AI54mFOAQ/e7H6HZAlScT32TmsXLbAGzgNqGNQ1N5BWot/SsvgxQg3uNaIX5U6bcE+3HNt2jI6hx
+        OoAj7goQO3QEvzd6R0CLjuDDQv8KYDN0hNMBanyfCKLFYU3r25gtwHbit2XxFgnKPq4keQNSxE0lroUs
+        mQAAAABJRU5ErkJggg==
+</value>
+  </data>
+  <data name="&gt;&gt;StatusBar.Type" xml:space="preserve">
+    <value>System.Windows.Forms.StatusStrip, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
   <data name="FileListViewSmallImageList.ImageStream" mimetype="application/x-microsoft.net.object.binary.base64">
     <value>
         AAEAAAD/////AQAAAAAAAAAMAgAAAEZTeXN0ZW0uV2luZG93cy5Gb3JtcywgQ3VsdHVyZT1uZXV0cmFs
         LCBQdWJsaWNLZXlUb2tlbj1iNzdhNWM1NjE5MzRlMDg5BQEAAAAmU3lzdGVtLldpbmRvd3MuRm9ybXMu
         SW1hZ2VMaXN0U3RyZWFtZXIBAAAABERhdGEHAgIAAAAJAwAAAA8DAAAAWggAAAJNU0Z0AUkBTAIBAQIB
-        AAGYAQEBmAEBARABAAEQAQAE/wEhAQAI/wFCAU0BNgcAATYDAAEoAwABQAMAARADAAEBAQABIAYAARBi
+        AAG8AQEBwAEBARABAAEQAQAE/wEhARAI/wFCAU0BNgcAATYDAAEoAwABQAMAARADAAEBAQABIAYAARBi
         AAMhATADRgF/A1oBvwJZAWcB7wJZAWcB7wNaAb8CSwFMAY8DIQEwkAABUAFRAVABnwFQAVEBUAGfAVAB
         UQFQAZ8BUAFRAVABnwFQAVEBUAGfAVABUQFQAZ8BUAFRAVABnwFQAVEBUAGfAVABUQFQAZ8BUAFRAVAB
         nwFQAVEBUAGfAVABUQFQAZ8DGAEgGAACQAFBAXACAAL/AgAC/wIAAv8CAAL/AgAC/wIAAv8CAAL/AlkB
@@ -257,285 +329,216 @@
         IQEwAkABQQFwA1UBrwJdAWEBzwJdAWMB3wNVAa8DRgF/AxgBIJAAAUIBTQE+BwABPgMAASgDAAFAAwAB
         EAMAAQEBAAEBBQABgBcAA/8BAAL/AfABDwUAAQcB4AEDBQABBwHAAQEEAAE/AccBgAEBBAABPgFHBgAB
         PAEnAQQFAAE4AR8BAgFABAABMAEPAQEBgAQAASABBwEBAYAEAAEhAQMBAgFABAABMwGBEAABgAEBBQAB
-        EAHAAQMEAAH/AfkB4AEHBAAC/wHwAQ8EAAs=
+        EAHAAQMEAAH/AfkB4AEHBAAC/wHwAQ8aAAs=
 </value>
   </data>
-  <data name="FileListView.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
+  <data name="&gt;&gt;StatusBar.Parent" xml:space="preserve">
+    <value>$this</value>
   </data>
-  <data name="&gt;&gt;FileListView.Name" xml:space="preserve">
-    <value>FileListView</value>
+  <data name="ToolBar.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="ItemCountLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>32, 17</value>
+  </data>
+  <data name="&gt;&gt;FileVersionHeader.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ColumnHeader, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;PublisherHeader.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ColumnHeader, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;FileListViewSmallImageList.Name" xml:space="preserve">
+    <value>FileListViewSmallImageList</value>
+  </data>
+  <data name="&gt;&gt;DigitalSignHeader.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ColumnHeader, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="DateHeader.Width" type="System.Int32, mscorlib">
+    <value>100</value>
+  </data>
+  <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
+    <value>7, 15</value>
+  </data>
+  <data name="&gt;&gt;ProgressBar.Name" xml:space="preserve">
+    <value>ProgressBar</value>
+  </data>
+  <data name="&gt;&gt;CopyrightHeader.Name" xml:space="preserve">
+    <value>CopyrightHeader</value>
+  </data>
+  <data name="StatusBar.Size" type="System.Drawing.Size, System.Drawing">
+    <value>1264, 22</value>
+  </data>
+  <data name="&gt;&gt;StatusBar.Name" xml:space="preserve">
+    <value>StatusBar</value>
   </data>
   <data name="&gt;&gt;FileListView.Type" xml:space="preserve">
     <value>System.Windows.Forms.ListView, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
+  <data name="FileListView.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Bottom, Left, Right</value>
+  </data>
+  <data name="&gt;&gt;FileVersionHeader.Name" xml:space="preserve">
+    <value>FileVersionHeader</value>
+  </data>
+  <data name="&gt;&gt;DateHeader.Name" xml:space="preserve">
+    <value>DateHeader</value>
+  </data>
+  <data name="&gt;&gt;ProductVersionHeader.Name" xml:space="preserve">
+    <value>ProductVersionHeader</value>
+  </data>
+  <data name="&gt;&gt;FilterTextBox.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripTextBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="FileVersionHeader.Text" xml:space="preserve">
+    <value>ファイルバージョン</value>
+  </data>
+  <data name="&gt;&gt;ShowDigitalSignTargetOnlyButton.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripButton, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="ShowDigitalSignTargetOnlyButton.Size" type="System.Drawing.Size, System.Drawing">
+    <value>23, 22</value>
+  </data>
+  <data name="&gt;&gt;FilterTypeComboBox.Name" xml:space="preserve">
+    <value>FilterTypeComboBox</value>
+  </data>
+  <data name="ItemCountLabel.Text" xml:space="preserve">
+    <value>(0/0)</value>
+  </data>
   <data name="&gt;&gt;FileListView.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
-  <data name="&gt;&gt;FileListView.ZOrder" xml:space="preserve">
-    <value>3</value>
+  <data name="FileListView.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
   </data>
-  <metadata name="ToolBar.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>210, 17</value>
-  </metadata>
-  <data name="ClearAllButton.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="FilterTypeComboBox.Items" xml:space="preserve">
+    <value>を含む</value>
+  </data>
+  <data name="DigitalSignHeader.Text" xml:space="preserve">
+    <value>デジタル署名</value>
+  </data>
+  <data name="ShowDigitalSignTargetOnlyButton.ImageTransparentColor" type="System.Drawing.Color, System.Drawing">
+    <value>Magenta</value>
+  </data>
+  <data name="DigitalSignHeader.Width" type="System.Int32, mscorlib">
+    <value>100</value>
+  </data>
+  <data name="PublisherHeader.Text" xml:space="preserve">
+    <value>署名者名</value>
+  </data>
+  <data name="&gt;&gt;ShowDigitalSignTargetOnlyButton.Name" xml:space="preserve">
+    <value>ShowDigitalSignTargetOnlyButton</value>
+  </data>
+  <data name="DescriptionHeader.Text" xml:space="preserve">
+    <value>ファイルの説明</value>
+  </data>
+  <data name="ShowDigitalSignTargetOnlyButton.ToolTipText" xml:space="preserve">
+    <value>Display only targets of digital signature</value>
+  </data>
+  <data name="DescriptionHeader.Width" type="System.Int32, mscorlib">
+    <value>100</value>
+  </data>
+  <data name="ClearAllButton.ToolTipText" xml:space="preserve">
+    <value>Delete All</value>
+  </data>
+  <data name="$this.Text" xml:space="preserve">
+    <value>Sigcheck Front End</value>
+  </data>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="FileListView.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>0, 0, 0, 0</value>
+  </data>
+  <data name="ToolBar.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="FileListViewSelectAllMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>168, 22</value>
+  </data>
+  <data name="FileListViewSelectAllMenuItem.ShortcutKeys" type="System.Windows.Forms.Keys, System.Windows.Forms">
+    <value>Ctrl+A</value>
+  </data>
+  <data name="&gt;&gt;ToolBar.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStrip, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="ProgressBar.Size" type="System.Drawing.Size, System.Drawing">
+    <value>100, 16</value>
+  </data>
+  <data name="FilterTextBox.ToolTipText" xml:space="preserve">
+    <value>Filter</value>
+  </data>
+  <data name="FilePathHeader.Width" type="System.Int32, mscorlib">
+    <value>200</value>
+  </data>
+  <data name="ShowDigitalSignTargetOnlyButton.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
-        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAADbSURBVDhPpZMBDYMwFESRMAmTgAQkzAELIGAOkICESUAC
-        EpAwCUhg99j/Kw2EwbjkwuX/3rX9Dckaqqp6FEXR6zsaB7G29jZkvJmpK8uygWhq9GxZDDXTGWsWy5h5
-        zTS1p9fgZM7z/ELzH8p79QCOeJhTgEP3ux+h2QJUnE99k5rFy2wBs4DahjUNTeQVqLf0rL4MUIN7jWiF
-        +VOm3BPtxzbdoyOocTqAI+4KEDt0BL83ekdAi47gw0L/CmAzdITTAWp8nwiixWFN69uYLcB24rdl8RYJ
-        yj6uJHkDUsRNJa6FLJkAAAAASUVORK5CYII=
+        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
+        wgAADsIBFShKgAAAAPlJREFUOE+Vk0sRwkAQRCMBB0QBhQRu+R1CRQEScIAEblyRgAQkIAEJSIB+m9kw
+        ZAmfruoKmZnXO4SQjVXX9bLrunnTNPcJX200FXBRFLeyLBdvwME2/qoIM/B3gIfxpwDmDHtKARs1t5jP
+        BHooGriqqrUdmAdYjZWKZ2/Vrh7EEQZkhvsQouZqPDx2hDlZ172uB9WPbdvOvgZ4WN7JJ9UvAY5fwQPe
+        U3BYPUqFtwE/wUjFqQ34RRKYuqG9VJjaIAdkE90PMD1De6mQBADRI4Cn7mEcwCgVkgBAejxp+oT4fgCj
+        GPBNMy8Saw+vt7ehveyUZOiD3d85yx7uAE4M15GtcAAAAABJRU5ErkJggg==
 </value>
   </data>
   <data name="ClearAllButton.ImageTransparentColor" type="System.Drawing.Color, System.Drawing">
     <value>Magenta</value>
   </data>
-  <data name="ClearAllButton.Size" type="System.Drawing.Size, System.Drawing">
-    <value>23, 22</value>
-  </data>
-  <data name="ClearAllButton.Text" xml:space="preserve">
-    <value>すべて削除</value>
-  </data>
-  <data name="ClearAllButton.ToolTipText" xml:space="preserve">
-    <value>すべて削除</value>
-  </data>
-  <data name="FilterTextBox.Size" type="System.Drawing.Size, System.Drawing">
-    <value>100, 25</value>
-  </data>
-  <data name="FilterTextBox.ToolTipText" xml:space="preserve">
-    <value>絞り込み</value>
-  </data>
-  <data name="FilterTypeComboBox.Items" xml:space="preserve">
-    <value>を含む</value>
-  </data>
-  <data name="FilterTypeComboBox.Items1" xml:space="preserve">
-    <value>で終わる</value>
-  </data>
-  <data name="FilterTypeComboBox.Items2" xml:space="preserve">
-    <value>から始まる</value>
-  </data>
-  <data name="FilterTypeComboBox.Size" type="System.Drawing.Size, System.Drawing">
-    <value>121, 25</value>
-  </data>
-  <data name="ShowDigitalSignTargetOnlyButton.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAD5SURBVDhPlZNLEcJAEEQjAQdEAYUEbvkdQkUBEnCABG5c
-        kYAEJCABCUiAfpvZMGQJn67qCpmZ1zuEkI1V1/Wy67p50zT3CV9tNBVwURS3siwXb8DBNv6qCDPwd4CH
-        8acA5gx7SgEbNbeYzwR6KBq4qqq1HZgHWI2Vimdv1a4exBEGZIb7EKLmajw8doQ5Wde9rgfVj23bzr4G
-        eFjeySfVLwGOX8ED3lNwWD1KhbcBP8FIxakN+EUSmLqhvVSY2iAHZBPdDzA9Q3upkAQA0SOAp+5hHMAo
-        FZIAQHo8afqE+H4AoxjwTTMvEmsPr7e3ob3slGTog93fOcse7gBODNeRrXAAAAAASUVORK5CYII=
-</value>
-  </data>
-  <data name="ShowDigitalSignTargetOnlyButton.ImageTransparentColor" type="System.Drawing.Color, System.Drawing">
-    <value>Magenta</value>
-  </data>
-  <data name="ShowDigitalSignTargetOnlyButton.Size" type="System.Drawing.Size, System.Drawing">
-    <value>23, 22</value>
-  </data>
-  <data name="ShowDigitalSignTargetOnlyButton.Text" xml:space="preserve">
-    <value>デジタル署名の付与対象のみ表示</value>
-  </data>
-  <data name="ShowDigitalSignTargetOnlyButton.ToolTipText" xml:space="preserve">
-    <value>デジタル署名の付与対象のみ表示</value>
-  </data>
-  <data name="ToolBar.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 0</value>
-  </data>
-  <data name="ToolBar.Size" type="System.Drawing.Size, System.Drawing">
-    <value>1264, 25</value>
-  </data>
-  <data name="ToolBar.TabIndex" type="System.Int32, mscorlib">
-    <value>1</value>
-  </data>
   <data name="ToolBar.Text" xml:space="preserve">
     <value>toolStrip1</value>
   </data>
-  <data name="&gt;&gt;ToolBar.Name" xml:space="preserve">
-    <value>ToolBar</value>
-  </data>
-  <data name="&gt;&gt;ToolBar.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStrip, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;ToolBar.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;ToolBar.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <metadata name="FilterTimer.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>303, 17</value>
-  </metadata>
-  <metadata name="StatusBar.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>412, 17</value>
-  </metadata>
-  <data name="ItemCountLabel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>32, 17</value>
-  </data>
-  <data name="ItemCountLabel.Text" xml:space="preserve">
-    <value>(0/0)</value>
-  </data>
-  <data name="ProgressBar.Size" type="System.Drawing.Size, System.Drawing">
-    <value>100, 16</value>
-  </data>
-  <data name="ProgressBar.Visible" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="StatusBar.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 466</value>
-  </data>
-  <data name="StatusBar.Size" type="System.Drawing.Size, System.Drawing">
-    <value>1264, 22</value>
-  </data>
-  <data name="StatusBar.TabIndex" type="System.Int32, mscorlib">
-    <value>2</value>
-  </data>
-  <data name="StatusBar.Text" xml:space="preserve">
-    <value>statusStrip1</value>
-  </data>
-  <data name="&gt;&gt;StatusBar.Name" xml:space="preserve">
-    <value>StatusBar</value>
-  </data>
-  <data name="&gt;&gt;StatusBar.Type" xml:space="preserve">
-    <value>System.Windows.Forms.StatusStrip, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;StatusBar.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;StatusBar.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
-    <value>7, 15</value>
-  </data>
-  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
-    <value>1264, 488</value>
-  </data>
-  <data name="$this.Text" xml:space="preserve">
-    <value>Sigcheck Front End</value>
-  </data>
-  <data name="&gt;&gt;FilePathHeader.Name" xml:space="preserve">
-    <value>FilePathHeader</value>
-  </data>
-  <data name="&gt;&gt;FilePathHeader.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ColumnHeader, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;DigitalSignHeader.Name" xml:space="preserve">
-    <value>DigitalSignHeader</value>
-  </data>
-  <data name="&gt;&gt;DigitalSignHeader.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ColumnHeader, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;DateHeader.Name" xml:space="preserve">
-    <value>DateHeader</value>
-  </data>
-  <data name="&gt;&gt;DateHeader.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ColumnHeader, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;PublisherHeader.Name" xml:space="preserve">
-    <value>PublisherHeader</value>
-  </data>
-  <data name="&gt;&gt;PublisherHeader.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ColumnHeader, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;DescriptionHeader.Name" xml:space="preserve">
-    <value>DescriptionHeader</value>
-  </data>
-  <data name="&gt;&gt;DescriptionHeader.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ColumnHeader, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;FileVersionHeader.Name" xml:space="preserve">
-    <value>FileVersionHeader</value>
-  </data>
-  <data name="&gt;&gt;FileVersionHeader.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ColumnHeader, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;ProductHeader.Name" xml:space="preserve">
-    <value>ProductHeader</value>
-  </data>
-  <data name="&gt;&gt;ProductHeader.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ColumnHeader, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;ProductVersionHeader.Name" xml:space="preserve">
-    <value>ProductVersionHeader</value>
-  </data>
-  <data name="&gt;&gt;ProductVersionHeader.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ColumnHeader, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;CopyrightHeader.Name" xml:space="preserve">
-    <value>CopyrightHeader</value>
-  </data>
-  <data name="&gt;&gt;CopyrightHeader.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ColumnHeader, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;FileListViewCopyMenuItem.Name" xml:space="preserve">
-    <value>FileListViewCopyMenuItem</value>
-  </data>
-  <data name="&gt;&gt;FileListViewCopyMenuItem.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;FileListViewSelectAllMenuItem.Name" xml:space="preserve">
-    <value>FileListViewSelectAllMenuItem</value>
-  </data>
-  <data name="&gt;&gt;FileListViewSelectAllMenuItem.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;FileListViewSmallImageList.Name" xml:space="preserve">
-    <value>FileListViewSmallImageList</value>
-  </data>
-  <data name="&gt;&gt;FileListViewSmallImageList.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ImageList, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;ClearAllButton.Name" xml:space="preserve">
-    <value>ClearAllButton</value>
-  </data>
-  <data name="&gt;&gt;ClearAllButton.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripButton, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;FilterTextBox.Name" xml:space="preserve">
-    <value>FilterTextBox</value>
-  </data>
-  <data name="&gt;&gt;FilterTextBox.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripTextBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;FilterTypeComboBox.Name" xml:space="preserve">
-    <value>FilterTypeComboBox</value>
-  </data>
-  <data name="&gt;&gt;FilterTypeComboBox.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripComboBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;ShowDigitalSignTargetOnlyButton.Name" xml:space="preserve">
-    <value>ShowDigitalSignTargetOnlyButton</value>
-  </data>
-  <data name="&gt;&gt;ShowDigitalSignTargetOnlyButton.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripButton, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;FilterTimer.Name" xml:space="preserve">
-    <value>FilterTimer</value>
+  <data name="&gt;&gt;FileListView.ZOrder" xml:space="preserve">
+    <value>3</value>
   </data>
   <data name="&gt;&gt;FilterTimer.Type" xml:space="preserve">
     <value>System.Windows.Forms.Timer, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;ItemCountLabel.Name" xml:space="preserve">
-    <value>ItemCountLabel</value>
-  </data>
-  <data name="&gt;&gt;ItemCountLabel.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripStatusLabel, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;ProgressBar.Name" xml:space="preserve">
-    <value>ProgressBar</value>
-  </data>
-  <data name="&gt;&gt;ProgressBar.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripProgressBar, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;$this.Name" xml:space="preserve">
-    <value>SigcheckFrontEndMainForm</value>
+  <data name="&gt;&gt;FileListViewMenu.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ContextMenuStrip, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;$this.Type" xml:space="preserve">
     <value>System.Windows.Forms.Form, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
+  <data name="FilePathHeader.Text" xml:space="preserve">
+    <value>ファイルパス</value>
+  </data>
+  <data name="StatusBar.Text" xml:space="preserve">
+    <value>statusStrip1</value>
+  </data>
+  <data name="&gt;&gt;$this.Name" xml:space="preserve">
+    <value>SigcheckFrontEndMainForm</value>
+  </data>
+  <data name="FileListViewSelectAllMenuItem.Text" xml:space="preserve">
+    <value>すべて選択</value>
+  </data>
+  <data name="FileListView.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 28</value>
+  </data>
+  <data name="&gt;&gt;FilterTimer.Name" xml:space="preserve">
+    <value>FilterTimer</value>
+  </data>
+  <data name="CopyrightHeader.Text" xml:space="preserve">
+    <value>著作権</value>
+  </data>
+  <data name="DateHeader.Text" xml:space="preserve">
+    <value>タイムスタンプ</value>
+  </data>
+  <metadata name="StatusBar.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>412, 17</value>
+  </metadata>
+  <metadata name="FileListViewMenu.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>515, 17</value>
+  </metadata>
+  <metadata name="FilterTimer.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>303, 17</value>
+  </metadata>
+  <metadata name="$this.Language" type="System.Globalization.CultureInfo, System.Private.CoreLib, Culture=neutral, PublicKeyToken=7cec85d7bea7798e">
+    <value>ja</value>
+  </metadata>
+  <metadata name="FileListViewSmallImageList.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
+  </metadata>
+  <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="ToolBar.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>210, 17</value>
+  </metadata>
 </root>
