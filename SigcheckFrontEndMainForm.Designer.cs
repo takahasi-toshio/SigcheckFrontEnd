@@ -63,22 +63,17 @@ namespace SigcheckFrontEnd
             // 
             // FilePathHeader
             // 
-            FilePathHeader.Text = "ファイルパス";
-            FilePathHeader.Width = 200;
+            resources.ApplyResources(FilePathHeader, "FilePathHeader");
             // 
             // FileListView
             // 
             FileListView.AllowDrop = true;
-            FileListView.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            resources.ApplyResources(FileListView, "FileListView");
             FileListView.Columns.AddRange(new ColumnHeader[] { FilePathHeader, DigitalSignHeader, DateHeader, PublisherHeader, DescriptionHeader, FileVersionHeader, ProductHeader, ProductVersionHeader, CopyrightHeader });
             FileListView.ContextMenuStrip = FileListViewMenu;
             FileListView.FullRowSelect = true;
-            FileListView.Location = new Point(0, 28);
-            FileListView.Margin = new Padding(0);
             FileListView.Name = "FileListView";
-            FileListView.Size = new Size(1264, 435);
             FileListView.SmallImageList = FileListViewSmallImageList;
-            FileListView.TabIndex = 0;
             FileListView.UseCompatibleStateImageBehavior = false;
             FileListView.View = View.Details;
             FileListView.DragDrop += FileListViewDragDrop;
@@ -86,63 +81,52 @@ namespace SigcheckFrontEnd
             // 
             // DigitalSignHeader
             // 
-            DigitalSignHeader.Text = "デジタル署名";
-            DigitalSignHeader.Width = 100;
+            resources.ApplyResources(DigitalSignHeader, "DigitalSignHeader");
             // 
             // DateHeader
             // 
-            DateHeader.Text = "タイムスタンプ";
-            DateHeader.Width = 100;
+            resources.ApplyResources(DateHeader, "DateHeader");
             // 
             // PublisherHeader
             // 
-            PublisherHeader.Text = "署名者名";
-            PublisherHeader.Width = 100;
+            resources.ApplyResources(PublisherHeader, "PublisherHeader");
             // 
             // DescriptionHeader
             // 
-            DescriptionHeader.Text = "ファイルの説明";
-            DescriptionHeader.Width = 100;
+            resources.ApplyResources(DescriptionHeader, "DescriptionHeader");
             // 
             // FileVersionHeader
             // 
-            FileVersionHeader.DisplayIndex = 6;
-            FileVersionHeader.Text = "ファイルバージョン";
-            FileVersionHeader.Width = 100;
+            resources.ApplyResources(FileVersionHeader, "FileVersionHeader");
             // 
             // ProductHeader
             // 
-            ProductHeader.DisplayIndex = 5;
-            ProductHeader.Text = "製品名";
+            resources.ApplyResources(ProductHeader, "ProductHeader");
             // 
             // ProductVersionHeader
             // 
-            ProductVersionHeader.Text = "プロダクトバージョン";
+            resources.ApplyResources(ProductVersionHeader, "ProductVersionHeader");
             // 
             // CopyrightHeader
             // 
-            CopyrightHeader.Text = "著作権";
+            resources.ApplyResources(CopyrightHeader, "CopyrightHeader");
             // 
             // FileListViewMenu
             // 
             FileListViewMenu.Items.AddRange(new ToolStripItem[] { FileListViewCopyMenuItem, FileListViewSelectAllMenuItem });
             FileListViewMenu.Name = "FileListViewMenu";
-            FileListViewMenu.Size = new Size(169, 48);
+            resources.ApplyResources(FileListViewMenu, "FileListViewMenu");
             // 
             // FileListViewCopyMenuItem
             // 
             FileListViewCopyMenuItem.Name = "FileListViewCopyMenuItem";
-            FileListViewCopyMenuItem.ShortcutKeys = Keys.Control | Keys.C;
-            FileListViewCopyMenuItem.Size = new Size(168, 22);
-            FileListViewCopyMenuItem.Text = "コピー";
+            resources.ApplyResources(FileListViewCopyMenuItem, "FileListViewCopyMenuItem");
             FileListViewCopyMenuItem.Click += FileListViewCopyMenuItem_Click;
             // 
             // FileListViewSelectAllMenuItem
             // 
             FileListViewSelectAllMenuItem.Name = "FileListViewSelectAllMenuItem";
-            FileListViewSelectAllMenuItem.ShortcutKeys = Keys.Control | Keys.A;
-            FileListViewSelectAllMenuItem.Size = new Size(168, 22);
-            FileListViewSelectAllMenuItem.Text = "すべて選択";
+            resources.ApplyResources(FileListViewSelectAllMenuItem, "FileListViewSelectAllMenuItem");
             FileListViewSelectAllMenuItem.Click += FileListViewSelectAllMenuItem_Click;
             // 
             // FileListViewSmallImageList
@@ -156,48 +140,36 @@ namespace SigcheckFrontEnd
             // ToolBar
             // 
             ToolBar.Items.AddRange(new ToolStripItem[] { ClearAllButton, FilterTextBox, FilterTypeComboBox, ShowDigitalSignTargetOnlyButton });
-            ToolBar.Location = new Point(0, 0);
+            resources.ApplyResources(ToolBar, "ToolBar");
             ToolBar.Name = "ToolBar";
-            ToolBar.Size = new Size(1264, 25);
-            ToolBar.TabIndex = 1;
-            ToolBar.Text = "toolStrip1";
             // 
             // ClearAllButton
             // 
             ClearAllButton.DisplayStyle = ToolStripItemDisplayStyle.Image;
-            ClearAllButton.Image = (Image)resources.GetObject("ClearAllButton.Image");
-            ClearAllButton.ImageTransparentColor = Color.Magenta;
+            resources.ApplyResources(ClearAllButton, "ClearAllButton");
             ClearAllButton.Name = "ClearAllButton";
-            ClearAllButton.Size = new Size(23, 22);
-            ClearAllButton.Text = "すべて削除";
-            ClearAllButton.ToolTipText = "すべて削除";
             ClearAllButton.Click += ClearAllButton_Click;
             // 
             // FilterTextBox
             // 
             FilterTextBox.Name = "FilterTextBox";
-            FilterTextBox.Size = new Size(100, 25);
-            FilterTextBox.ToolTipText = "絞り込み";
+            resources.ApplyResources(FilterTextBox, "FilterTextBox");
             FilterTextBox.TextChanged += FilterTextBoxTextChanged;
             // 
             // FilterTypeComboBox
             // 
             FilterTypeComboBox.DropDownStyle = ComboBoxStyle.DropDownList;
-            FilterTypeComboBox.Items.AddRange(new object[] { "を含む", "で終わる", "から始まる" });
+            FilterTypeComboBox.Items.AddRange(new object[] { resources.GetString("FilterTypeComboBox.Items"), resources.GetString("FilterTypeComboBox.Items1"), resources.GetString("FilterTypeComboBox.Items2") });
             FilterTypeComboBox.Name = "FilterTypeComboBox";
-            FilterTypeComboBox.Size = new Size(121, 25);
+            resources.ApplyResources(FilterTypeComboBox, "FilterTypeComboBox");
             FilterTypeComboBox.SelectedIndexChanged += FilterTypeComboBoxChanged;
             // 
             // ShowDigitalSignTargetOnlyButton
             // 
             ShowDigitalSignTargetOnlyButton.CheckOnClick = true;
             ShowDigitalSignTargetOnlyButton.DisplayStyle = ToolStripItemDisplayStyle.Image;
-            ShowDigitalSignTargetOnlyButton.Image = (Image)resources.GetObject("ShowDigitalSignTargetOnlyButton.Image");
-            ShowDigitalSignTargetOnlyButton.ImageTransparentColor = Color.Magenta;
+            resources.ApplyResources(ShowDigitalSignTargetOnlyButton, "ShowDigitalSignTargetOnlyButton");
             ShowDigitalSignTargetOnlyButton.Name = "ShowDigitalSignTargetOnlyButton";
-            ShowDigitalSignTargetOnlyButton.Size = new Size(23, 22);
-            ShowDigitalSignTargetOnlyButton.Text = "デジタル署名の付与対象のみ表示";
-            ShowDigitalSignTargetOnlyButton.ToolTipText = "デジタル署名の付与対象のみ表示";
             ShowDigitalSignTargetOnlyButton.CheckedChanged += ShowDigitalSignTargetOnlyButton_CheckedChanged;
             // 
             // FilterTimer
@@ -208,37 +180,30 @@ namespace SigcheckFrontEnd
             // StatusBar
             // 
             StatusBar.Items.AddRange(new ToolStripItem[] { ItemCountLabel, ProgressBar });
-            StatusBar.Location = new Point(0, 466);
+            resources.ApplyResources(StatusBar, "StatusBar");
             StatusBar.Name = "StatusBar";
-            StatusBar.Size = new Size(1264, 22);
-            StatusBar.TabIndex = 2;
-            StatusBar.Text = "statusStrip1";
             // 
             // ItemCountLabel
             // 
             ItemCountLabel.Name = "ItemCountLabel";
-            ItemCountLabel.Size = new Size(32, 17);
-            ItemCountLabel.Text = "(0/0)";
+            resources.ApplyResources(ItemCountLabel, "ItemCountLabel");
             // 
             // ProgressBar
             // 
             ProgressBar.Name = "ProgressBar";
-            ProgressBar.Size = new Size(100, 16);
+            resources.ApplyResources(ProgressBar, "ProgressBar");
             ProgressBar.Style = ProgressBarStyle.Marquee;
-            ProgressBar.Visible = false;
             // 
             // SigcheckFrontEndMainForm
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
+            resources.ApplyResources(this, "$this");
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1264, 488);
             Controls.Add(StatusBar);
             Controls.Add(ToolBar);
             Controls.Add(FileListView);
             Name = "SigcheckFrontEndMainForm";
-            Text = "Sigcheck Front End";
-            Load += SigcheckFrontEndMainForm_Load;
             FormClosing += SigcheckFrontEndMainForm_FormClosing;
+            Load += SigcheckFrontEndMainForm_Load;
             FileListViewMenu.ResumeLayout(false);
             ToolBar.ResumeLayout(false);
             ToolBar.PerformLayout();
