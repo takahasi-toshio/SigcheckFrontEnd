@@ -158,6 +158,10 @@ namespace SigcheckFrontEnd
                                 else if (values != null)
                                 {
                                     string path = values[0];
+                                    if (path.StartsWith(targetPath, StringComparison.OrdinalIgnoreCase))
+                                    {
+                                        path = targetPath + path.Remove(0, targetPath.Length);
+                                    }
                                     string verified = values[1];
                                     string date = values[2];
                                     string publisher = values[3];
